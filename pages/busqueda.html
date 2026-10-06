@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar - Recomendador de Lectura</title>
+  <meta name="description" content="Busca libros, autores y géneros en el catálogo." />
+
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#9c413f" />
+
+  <link rel="stylesheet" href="../Styles/busqueda.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- Encabezado Principal -->
+    <header class="header">
+      <div class="header-brand">
+       
+        <div class="avatar-placeholder" title="Espacio para foto de perfil">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <span class="brand-title">Recomendador de Lectura</span>
+      </div>
+      <button class="icon-btn" aria-label="Notificaciones">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+    </header>
+
+    <main class="main-content">
+
+      <section>
+        <h1 class="page-title" style="margin-bottom: 12px;">Explorar Catálogo</h1>
+        <div class="search-container">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input type="search" class="search-input" placeholder="Buscar libros, autores, géneros..." id="searchInput" />
+        </div>
+
+        <div class="chip-group" style="margin-top: 16px;">
+          <button class="chip active">Todos</button>
+          <button class="chip">Ficción</button>
+          <button class="chip">No Ficción</button>
+          <button class="chip">Ciencia Ficción</button>
+          <button class="chip">Misterio</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title-group">
+          <h2 class="section-title">Resultados Destacados</h2>
+        </div>
+
+        <div class="books-grid">
+
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <div class="cover-placeholder burgundy">
+                  <span class="genre-tag">Ficción</span>
+                  <p class="placeholder-title">El Laberinto</p>
+                  <span class="placeholder-author">Ana Silva</span>
+                </div>
+              </div>
+              <h3 class="book-title">El Laberinto</h3>
+              <p class="book-author">Ana Silva</p>
+              <span class="book-year">2023</span>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                  <span class="genre-tag">Misterio</span>
+                  <p class="placeholder-title">Sombras</p>
+                  <span class="placeholder-author">Carlos Ruiz</span>
+                </div>
+              </div>
+              <h3 class="book-title">Sombras</h3>
+              <p class="book-author">Carlos Ruiz</p>
+              <span class="book-year">2022</span>
+            </div>
+          </article>
+
+          <!-- Libro 3 -->
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <!--<img class="cover-img" src="../assets/imagenes/tiempo.jpg" alt="Portada El Tiempo" /> -->
+                <div class="cover-placeholder green">
+                  <span class="genre-tag">Ensayo</span>
+                  <p class="placeholder-title">El Tiempo</p>
+                  <span class="placeholder-author">Elena Costa</span>
+                </div>
+              </div>
+              <h3 class="book-title">El Tiempo</h3>
+              <p class="book-author">Elena Costa</p>
+              <span class="book-year">2024</span>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <!-- <img class="cover-img" src="../assets/imagenes/mar-abierto.jpg" alt="Portada Mar Abierto" /> -->
+                <div class="cover-placeholder gold">
+                  <span class="genre-tag">Novela</span>
+                  <p class="placeholder-title">Mar Abierto</p>
+                  <span class="placeholder-author">David Ríos</span>
+                </div>
+              </div>
+              <h3 class="book-title">Mar Abierto</h3>
+              <p class="book-author">David Ríos</p>
+              <span class="book-year">2021</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-badge">
+            <span class="footer-signature">Elaborado por <strong>David Pescador</strong></span>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-item">
+          <span class="material-symbols-outlined">home</span>
+          <span class="nav-label">Inicio</span>
+        </a>
+        <a href="busqueda.html" class="nav-item active">
+          <span class="material-symbols-outlined filled">search</span>
+          <span class="nav-label">Buscar</span>
+        </a>
+        <a href="favoritos.html" class="nav-item">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="nav-label">Favoritos</span>
+        </a>
+        <a href="cercadeti.html" class="nav-item">
+          <span class="material-symbols-outlined">distance</span>
+          <span class="nav-label">Cerca de ti</span>
+        </a>
+        <a href="perfil.html" class="nav-item">
+          <span class="material-symbols-outlined">person</span>
+          <span class="nav-label">Perfil</span>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+    <!-- JavaScript de la aplicación (el orden importa) -->
+    <script src="../javascript/api.js"></script>
+    <script src="../javascript/favoritos.js"></script>
+    <script src="../javascript/libros.js"></script>
+    <script src="../javascript/perfil.js"></script>
+    <script src="../javascript/app.js"></script>
+
+</body>
+</html>

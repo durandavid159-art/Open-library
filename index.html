@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recomendador de Lectura</title>
+  <meta name="description" content="Aplicación de recomendaciones literarias personalizadas, catálogo de libros y librerías cercanas." />
+
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#9c413f" />
+
+  <link rel="stylesheet" href="Styles/index.css" />
+</head>
+<body data-pagina="inicio">
+
+  <div class="app-wrapper">
+
+    <!-- 1. Encabezado Principal -->
+    <header class="header">
+      <div class="header-brand">
+        <div class="avatar-placeholder" title="Espacio para foto de perfil">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <span class="brand-title">Recomendador de Lectura</span>
+      </div>
+      <button class="icon-btn" aria-label="Notificaciones">
+        <span class="material-symbols-outlined">notifications</span>
+        <span class="notification-badge"></span>
+      </button>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+
+      <!-- 2. Saludo Personalizado -->
+      <section class="welcome-section">
+        <div class="welcome-header">
+          <h1 class="greeting">Hola, David 👋</h1>
+          <span class="user-badge">Lector voraz</span>
+        </div>
+        <p class="subgreeting">¿Qué historia descubrirás hoy? Cada página es un nuevo destino.</p>
+      </section>
+
+      <section class="search-section">
+        <div class="search-container">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input type="search" class="search-input" placeholder="Buscar libros, autores o ISBN..." id="searchInput" />
+          <button class="filter-btn" aria-label="Filtros de búsqueda">
+            <span class="material-symbols-outlined">tune</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="recommendations-section">
+        <div class="section-title-group">
+          <div>
+            <h2 class="section-title">Recomendados para ti</h2>
+            <p class="section-subtitle">Basado en tus lecturas recientes</p>
+          </div>
+          <a href="pages/busqueda.html" class="link-more">Ver catálogo →</a>
+        </div>
+
+        <div class="books-grid" id="recomendadosGrid">
+
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <div class="cover-placeholder burgundy">
+                  <span class="genre-tag">Histórica</span>
+                  <p class="placeholder-title">El Ruido del Tiempo</p>
+                  <span class="placeholder-author">Julian Barnes</span>
+                </div>
+                <div class="rating-badge">
+                  <span class="material-symbols-outlined rating-icon filled">star</span>
+                  4.8
+                </div>
+              </div>
+              <h3 class="book-title">El Ruido del Tiempo</h3>
+              <p class="book-author">Julian Barnes</p>
+            </div>
+            <div class="book-footer">
+              <span class="tag-label">Histórica</span>
+              <button class="fav-btn" aria-label="Guardar en favoritos">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Libro 2 -->
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <div class="cover-placeholder green">
+                  <span class="genre-tag">Memorias</span>
+                  <p class="placeholder-title">París Era Una Fiesta</p>
+                  <span class="placeholder-author">E. Hemingway</span>
+                </div>
+                <div class="rating-badge">
+                  <span class="material-symbols-outlined rating-icon filled">star</span>
+                  4.6
+                </div>
+              </div>
+              <h3 class="book-title">París Era Una Fiesta</h3>
+              <p class="book-author">Ernest Hemingway</p>
+            </div>
+            <div class="book-footer">
+              <span class="tag-label">Memorias</span>
+              <button class="fav-btn" aria-label="Guardar en favoritos">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Libro 3 -->
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <div class="cover-placeholder gold">
+                  <span class="genre-tag">Clásico</span>
+                  <p class="placeholder-title">De Profundis</p>
+                  <span class="placeholder-author">Oscar Wilde</span>
+                </div>
+                <div class="rating-badge">
+                  <span class="material-symbols-outlined rating-icon filled">star</span>
+                  4.9
+                </div>
+              </div>
+              <h3 class="book-title">De Profundis</h3>
+              <p class="book-author">Oscar Wilde</p>
+            </div>
+            <div class="book-footer">
+              <span class="tag-label">Clásico</span>
+              <button class="fav-btn" aria-label="Guardar en favoritos">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Libro 4 -->
+          <article class="book-card">
+            <div>
+              <div class="cover-wrapper">
+                <div class="cover-placeholder">
+                  <span class="genre-tag">Ensayo</span>
+                  <p class="placeholder-title">La invención de la soledad</p>
+                  <span class="placeholder-author">P. Auster</span>
+                </div>
+                <div class="rating-badge">
+                  <span class="material-symbols-outlined rating-icon filled">star</span>
+                  4.7
+                </div>
+              </div>
+              <h3 class="book-title">La Invención de la Soledad</h3>
+              <p class="book-author">Paul Auster</p>
+            </div>
+            <div class="book-footer">
+              <span class="tag-label">Ensayo</span>
+              <button class="fav-btn" aria-label="Guardar en favoritos">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="genre-section">
+        <div class="section-title-group">
+          <div>
+            <h2 class="section-title">Porque te gusta la Ciencia Ficción</h2>
+            <p class="section-subtitle">Afinidad 96% con tus gustos</p>
+          </div>
+          <a href="pages/busqueda.html" class="link-more">Ver todos →</a>
+        </div>
+
+        <div class="featured-stack">
+
+          <article class="horizontal-card">
+            <div class="horizontal-cover">
+            
+              <div class="cover-placeholder gold">
+                <span class="genre-tag">Sci-Fi</span>
+                <p class="placeholder-title">Solaris</p>
+                <span class="placeholder-author">S. Lem</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-header-row">
+                  <h3 class="book-title">Solaris</h3>
+                  <span class="chip-tag">Top Sci-Fi</span>
+                </div>
+                <p class="book-author">Stanislaw Lem · 1961</p>
+                <p class="book-desc">Una reflexión filosófica sobre el contacto con una inteligencia planetaria enigmática e inalcanzable.</p>
+              </div>
+              <div class="book-footer">
+                <span class="rating-badge" style="position: static; box-shadow: none; background: transparent; padding: 0;">
+                  <span class="material-symbols-outlined rating-icon filled">star</span> 4.9 (1.2k)
+                </span>
+                <span class="review-link">Ver reseña →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Horizontal 2 -->
+          <article class="horizontal-card">
+            <div class="horizontal-cover">
+              <div class="cover-placeholder green">
+                <span class="genre-tag">Distopía</span>
+                <p class="placeholder-title">Fahrenheit 451</p>
+                <span class="placeholder-author">R. Bradbury</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-header-row">
+                  <h3 class="book-title">Fahrenheit 451</h3>
+                  <span class="chip-tag">Imprescindible</span>
+                </div>
+                <p class="book-author">Ray Bradbury · 1953</p>
+                <p class="book-desc">Bomberos cuyo deber es quemar libros en una sociedad donde el pensamiento crítico está prohibido.</p>
+              </div>
+              <div class="book-footer">
+                <span class="rating-badge" style="position: static; box-shadow: none; background: transparent; padding: 0;">
+                  <span class="material-symbols-outlined rating-icon filled">star</span> 4.8 (3.4k)
+                </span>
+                <span class="review-link">Ver reseña →</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="new-releases-section">
+        <div class="section-title-group">
+          <h2 class="section-title">Nuevos títulos</h2>
+          <span class="section-subtitle">Esta semana</span>
+        </div>
+
+        <div class="list-group">
+          <a href="pages/busqueda.html" class="list-item">
+            <div class="item-left">
+              <span class="item-number">01</span>
+              <div>
+                <h4 class="book-title">El problema de los tres cuerpos</h4>
+                <p class="book-author">Cixin Liu · Edición Especial</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined" style="color: var(--color-outline);">chevron_right</span>
+          </a>
+
+          <a href="pages/busqueda.html" class="list-item">
+            <div class="item-left">
+              <span class="item-number">02</span>
+              <div>
+                <h4 class="book-title">Klara y el Sol</h4>
+                <p class="book-author">Kazuo Ishiguro · Tapa Blanda</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined" style="color: var(--color-outline);">chevron_right</span>
+          </a>
+        </div>
+
+        <div class="banner-box" style="margin-top: 16px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="banner-icon-bg">
+              <span class="material-symbols-outlined">distance</span>
+            </div>
+            <div>
+              <h3 class="book-title">Libros y eventos cerca de ti</h3>
+              <p class="book-author">Clubes de lectura y librerías a menos de 3 km</p>
+            </div>
+          </div>
+          <a href="pages/cercadeti.html" class="banner-action" aria-label="Explorar eventos cercanos">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <a href="pages/inicio.html" class="link-more">Historia del proyecto →</a>
+          <div class="footer-badge">
+            <span class="footer-signature">Elaborado por <strong>David Pescador</strong></span>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+    <nav class="bottom-nav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-item active">
+          <span class="material-symbols-outlined filled">home</span>
+          <span class="nav-label">Inicio</span>
+        </a>
+        <a href="pages/busqueda.html" class="nav-item">
+          <span class="material-symbols-outlined">search</span>
+          <span class="nav-label">Buscar</span>
+        </a>
+        <a href="pages/favoritos.html" class="nav-item">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="nav-label">Favoritos</span>
+        </a>
+        <a href="pages/cercadeti.html" class="nav-item">
+          <span class="material-symbols-outlined">distance</span>
+          <span class="nav-label">Cerca de ti</span>
+        </a>
+        <a href="pages/perfil.html" class="nav-item">
+          <span class="material-symbols-outlined">person</span>
+          <span class="nav-label">Perfil</span>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+
+  <script src="javascript/api.js"></script>
+  <script src="javascript/favoritos.js"></script>
+  <script src="javascript/libros.js"></script>
+  <script src="javascript/perfil.js"></script>
+  <script src="javascript/app.js"></script>
+
+</body>
+</html>

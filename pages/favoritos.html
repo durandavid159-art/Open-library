@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favoritos - Recomendador de Lectura</title>
+  <meta name="description" content="Tus libros guardados y listas de lectura." />
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#9c413f" />
+  <link rel="stylesheet" href="../Styles/favoritos.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- Encabezado Principal -->
+    <header class="header">
+      <div class="header-brand">
+        <div class="avatar-placeholder" title="Espacio para foto de perfil">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <span class="brand-title">Recomendador de Lectura</span>
+      </div>
+      <button class="icon-btn" aria-label="Notificaciones">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+
+      <section>
+        <h1 class="page-title" style="margin-bottom: 16px;">Mis Favoritos ❤️</h1>
+        
+        <div class="fav-stack" id="favList">
+          <article class="fav-card">
+            <div class="fav-cover">
+              <div class="cover-placeholder">
+                <span class="genre-tag">Histórica</span>
+                <p class="placeholder-title">El Ruido del Tiempo</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div>
+                <h3 class="book-title">El Ruido del Tiempo</h3>
+                <p class="book-author">Julian Barnes</p>
+              </div>
+              <span class="material-symbols-outlined filled" style="color: var(--color-secondary);">favorite</span>
+            </div>
+          </article>
+
+          <article class="fav-card">
+            <div class="fav-cover">
+              <div class="cover-placeholder" style="background: linear-gradient(135deg, #2d4236, #1c1917);">
+                <span class="genre-tag">Memorias</span>
+                <p class="placeholder-title">París Era Una Fiesta</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div>
+                <h3 class="book-title">París Era Una Fiesta</h3>
+                <p class="book-author">Ernest Hemingway</p>
+              </div>
+              <span class="material-symbols-outlined filled" style="color: var(--color-secondary);">favorite</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-badge">
+            <span class="footer-signature">Elaborado por <strong>David Pescador</strong></span>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-item">
+          <span class="material-symbols-outlined">home</span>
+          <span class="nav-label">Inicio</span>
+        </a>
+        <a href="busqueda.html" class="nav-item">
+          <span class="material-symbols-outlined">search</span>
+          <span class="nav-label">Buscar</span>
+        </a>
+        <a href="favoritos.html" class="nav-item active">
+          <span class="material-symbols-outlined filled">favorite</span>
+          <span class="nav-label">Favoritos</span>
+        </a>
+        <a href="cercadeti.html" class="nav-item">
+          <span class="material-symbols-outlined">distance</span>
+          <span class="nav-label">Cerca de ti</span>
+        </a>
+        <a href="perfil.html" class="nav-item">
+          <span class="material-symbols-outlined">person</span>
+          <span class="nav-label">Perfil</span>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+
+  <script src="../javascript/api.js"></script>
+  <script src="../javascript/favoritos.js"></script>
+  <script src="../javascript/libros.js"></script>
+  <script src="../javascript/perfil.js"></script>
+  <script src="../javascript/app.js"></script>
+
+</body>
+</html>

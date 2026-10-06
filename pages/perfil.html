@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Recomendador de Lectura</title>
+  <meta name="description" content="Perfil de usuario y estadísticas de lectura." />
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#9c413f" />
+  <link rel="stylesheet" href="../Styles/perfil.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- Encabezado Principal -->
+    <header class="header">
+      <div class="header-brand">
+        <div class="avatar-placeholder" title="Espacio para foto de perfil">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <span class="brand-title">Recomendador de Lectura</span>
+      </div>
+      <button class="icon-btn" aria-label="Notificaciones">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+
+      <section class="profile-card">
+        <div class="big-avatar-placeholder">
+          <span class="material-symbols-outlined" style="font-size: 40px;">person</span>
+        </div>
+        <div>
+          <h1 class="profile-name">David Pescador</h1>
+          <p class="profile-bio">Lector voraz · Amante de la literatura clásica y ciencia ficción</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <p class="stat-num">42</p>
+            <p class="stat-label">Leídos</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num" id="statFavoritos">0</p>
+            <p class="stat-label">Favoritos</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num">96%</p>
+            <p class="stat-label">Afinidad</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-card">
+        <div class="section-title-group" style="width: 100%;">
+          <div>
+            <h2 class="section-title">Mis preferencias de lectura</h2>
+            <p class="section-subtitle">Se usan para recomendarte libros</p>
+          </div>
+        </div>
+
+        <form id="formPreferencias" class="form-preferencias">
+
+          <div class="campo-formulario">
+            <label class="etiqueta-formulario">Géneros favoritos</label>
+            <div class="chip-group">
+              <button type="button" class="chip" data-genero="fantasy">Fantasía</button>
+              <button type="button" class="chip" data-genero="science fiction">Ciencia Ficción</button>
+              <button type="button" class="chip" data-genero="mystery">Misterio</button>
+              <button type="button" class="chip" data-genero="history">Historia</button>
+              <button type="button" class="chip" data-genero="romance">Romance</button>
+              <button type="button" class="chip" data-genero="poetry">Poesía</button>
+              <button type="button" class="chip" data-genero="philosophy">Filosofía</button>
+            </div>
+          </div>
+
+          <div class="campo-formulario">
+            <label class="etiqueta-formulario" for="autorFavorito">Autor favorito</label>
+            <input type="text" id="autorFavorito" class="input-formulario" placeholder="Ej: Gabriel García Márquez" autocomplete="off" />
+          </div>
+
+          <div class="campo-formulario">
+            <label class="etiqueta-formulario" for="idiomaLectura">Idioma de lectura</label>
+            <select id="idiomaLectura" class="input-formulario">
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
+              <option value="fr">Francés</option>
+              <option value="pt">Portugués</option>
+              <option value="de">Alemán</option>
+            </select>
+          </div>
+
+          <div class="campo-formulario">
+            <label class="etiqueta-formulario" for="frecuenciaLectura">Frecuencia de lectura</label>
+            <select id="frecuenciaLectura" class="input-formulario">
+              <option value="diaria">A diario</option>
+              <option value="varios">Varias veces por semana</option>
+              <option value="semanal">Una vez por semana</option>
+              <option value="ocasional">Ocasionalmente</option>
+            </select>
+          </div>
+
+          <p class="mensaje-preferencias" id="mensajePreferencias"></p>
+
+          <button type="submit" class="boton-guardar">Guardar preferencias</button>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-badge">
+            <span class="footer-signature">Elaborado por <strong>David Pescador</strong></span>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-item">
+          <span class="material-symbols-outlined">home</span>
+          <span class="nav-label">Inicio</span>
+        </a>
+        <a href="busqueda.html" class="nav-item">
+          <span class="material-symbols-outlined">search</span>
+          <span class="nav-label">Buscar</span>
+        </a>
+        <a href="favoritos.html" class="nav-item">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="nav-label">Favoritos</span>
+        </a>
+        <a href="cercadeti.html" class="nav-item">
+          <span class="material-symbols-outlined">distance</span>
+          <span class="nav-label">Cerca de ti</span>
+        </a>
+        <a href="perfil.html" class="nav-item active">
+          <span class="material-symbols-outlined filled">person</span>
+          <span class="nav-label">Perfil</span>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+
+  <script src="../javascript/api.js"></script>
+  <script src="../javascript/favoritos.js"></script>
+  <script src="../javascript/libros.js"></script>
+  <script src="../javascript/perfil.js"></script>
+  <script src="../javascript/app.js"></script>
+
+</body>
+</html>
